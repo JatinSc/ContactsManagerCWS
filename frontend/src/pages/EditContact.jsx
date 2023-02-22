@@ -26,7 +26,7 @@ const EditContact = () => {
   const handleSubmit = async (event) => {
     event.preventDefault()
 
-    const res = await fetch(`http://127.0.0.1:8000/contact`, {
+    const res = await fetch(`https://contactmanagerbackend-d7sm.onrender.com/contact`, {
       method: "PUT",
       headers: {
         "Content-type": "application/json",
@@ -51,7 +51,7 @@ const EditContact = () => {
   useEffect(async () => {
     setLoading(true)
     try {
-      const res = await fetch(`http://127.0.0.1:8000/contact/${id}`, {
+      const res = await fetch(`https://contactmanagerbackend-d7sm.onrender.com/contact/${id}`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`

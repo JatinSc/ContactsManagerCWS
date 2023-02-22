@@ -22,9 +22,10 @@ export const AuthContextProvider = ({ children }) => {
 
 // $ check if the user is logged in.
 const checkUserLoggedIn = async () =>{
+    // # localhost url => http://127.0.0.1:8000
     
     try {
-        const res = await fetch('http://127.0.0.1:8000/me',{
+        const res = await fetch('https://contactmanagerbackend-d7sm.onrender.com/me',{
             method : "GET",
             headers:{
                 Authorization : `Bearer ${localStorage.getItem("token")}`,
@@ -56,7 +57,7 @@ const checkUserLoggedIn = async () =>{
 // $ login request 
 const loginUser = async(userData) =>{
 try {
-    const res = await fetch('http://127.0.0.1:8000/login',{
+    const res = await fetch('https://contactmanagerbackend-d7sm.onrender.com/login',{
         method: 'POST',
         headers:{
             "content-type": "application/json"
@@ -83,7 +84,7 @@ try {
 // $ register request
 const registerUser = async (userData) =>{
     try {
-        const res = await fetch('http://127.0.0.1:8000/register',{
+        const res = await fetch('https://contactmanagerbackend-d7sm.onrender.com/register',{
         method: 'POST',
         headers:{
             "content-type": "application/json"

@@ -19,7 +19,7 @@ const AllContact = () => {
   const getContact = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`http://127.0.0.1:8000/mycontact`, {
+      const res = await fetch(`https://contactmanagerbackend-d7sm.onrender.com/mycontact`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -50,7 +50,7 @@ const AllContact = () => {
     //# confirm method is used to reconfirm the deletion of a contact
     if (window.confirm("Are you sure you want to delete this contact ?")) {
       try {
-        const res = await fetch(`http://127.0.0.1:8000/delete/${id}`, {
+        const res = await fetch(`https://contactmanagerbackend-d7sm.onrender.com/delete/${id}`, {
           method: "DELETE",
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

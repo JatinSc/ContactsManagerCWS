@@ -32,6 +32,7 @@ const Register = () => {
       return;
      }
      const userData = {...credentials,confirmPassword:undefined}
+    //# now we will send data to /context/authContext
      registerUser(userData)
    }
 

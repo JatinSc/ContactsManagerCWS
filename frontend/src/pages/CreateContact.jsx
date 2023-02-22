@@ -22,7 +22,7 @@ const CreateContact = () => {
     const handleSubmit = async (event) =>{
       event.preventDefault()  
 
-      const res = await fetch(`http://127.0.0.1:8000/contact`, {
+      const res = await fetch(`https://contactmanagerbackend-d7sm.onrender.com/contact`, {
         method : "POST",
         headers : {
             "Content-type": "application/json",
